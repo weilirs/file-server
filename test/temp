@@ -1,0 +1,128 @@
+@@@ port 8884
+
+@@@ #1 disk_readblock: block 0
+
+@@@ #2 disk_readblock: block 0
+
+@@@ #3 disk_writeblock: block 4094
+
+@@@ #4 disk_writeblock: block 4095
+
+@@@ #5 disk_writeblock: block 0
+
+@@@ #6 send 5 23 FS_CREATE user1 /dir d
+
+@@@ #7 close 5
+
+@@@ #8 disk_readblock: block 0
+
+@@@ #9 disk_readblock: block 4095
+
+@@@ #10 disk_readblock: block 4094
+
+@@@ #11 disk_writeblock: block 4092
+
+@@@ #12 disk_writeblock: block 4093
+
+@@@ #13 disk_writeblock: block 4094
+
+@@@ #14 send 5 33 FS_CREATE user1 /dir/something d
+
+@@@ #15 close 5
+
+@@@ #16 disk_readblock: block 0
+
+@@@ #17 disk_readblock: block 4095
+
+@@@ #18 disk_readblock: block 4094
+
+@@@ #19 disk_readblock: block 4093
+
+@@@ #20 close 5
+
+@@@ #21 disk_readblock: block 0
+
+@@@ #22 disk_readblock: block 4095
+
+@@@ #23 disk_readblock: block 4094
+
+@@@ #24 disk_readblock: block 4093
+
+@@@ #25 disk_readblock: block 4092
+
+@@@ #26 disk_writeblock: block 4090
+
+@@@ #27 disk_writeblock: block 4091
+
+@@@ #28 disk_writeblock: block 4092
+
+@@@ #29 send 5 43 FS_CREATE user1 /dir/something/something f
+
+@@@ #30 close 5
+
+@@@ #31 disk_readblock: block 0
+
+@@@ #32 disk_readblock: block 4095
+
+@@@ #33 disk_readblock: block 4094
+
+@@@ #34 disk_readblock: block 4093
+
+@@@ #35 disk_readblock: block 4092
+
+@@@ #36 disk_readblock: block 4091
+
+@@@ #37 disk_readblock: block 4090
+
+@@@ #38 disk_writeblock: block 4089
+
+@@@ #39 disk_writeblock: block 4090
+
+@@@ #40 send 5 47 FS_WRITEBLOCK user1 /dir/something/something 0
+
+@@@ #41 close 5
+
+@@@ #42 disk_readblock: block 0
+
+@@@ #43 disk_readblock: block 4095
+
+@@@ #44 disk_readblock: block 4094
+
+@@@ #45 disk_readblock: block 4093
+
+@@@ #46 disk_readblock: block 4092
+
+@@@ #47 disk_readblock: block 4091
+
+@@@ #48 disk_readblock: block 4090
+
+@@@ #49 disk_writeblock: block 4088
+
+@@@ #50 disk_writeblock: block 4090
+
+@@@ #51 send 5 47 FS_WRITEBLOCK user1 /dir/something/something 1
+
+@@@ #52 close 5
+
+@@@ #53 disk_readblock: block 0
+
+@@@ #54 disk_readblock: block 4095
+
+@@@ #55 disk_readblock: block 4094
+
+@@@ #56 disk_readblock: block 4093
+
+@@@ #57 disk_readblock: block 4092
+
+@@@ #58 disk_readblock: block 4091
+
+@@@ #59 disk_readblock: block 4090
+
+@@@ #60 disk_writeblock: block 4092
+
+@@@ #61 disk_writeblock: block 4091
+
+@@@ #62 send 5 41 FS_DELETE user1 /dir/something/something
+
+@@@ #63 close 5
+

@@ -1,0 +1,4 @@
+include/*.h
+src/*.cpp
+test/*.cpp
+test/*.fs
